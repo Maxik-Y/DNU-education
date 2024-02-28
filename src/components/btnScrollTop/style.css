@@ -1,0 +1,37 @@
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-image: url('~/src/img/arrow.png');
+    background-size: cover;
+    border: none;
+    border-radius: 20%;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.4s;
+    width: 50px;
+    height: 50px;
+    animation: fadeIn 0.5s ease-in-out forwards
+  }
+  
+#scrollToTopBtn:hover {
+    background-color: #373de7;
+  }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@media (max-width: 620px) {
+#scrollToTopBtn {
+  width: 35px;
+  height: 35px;
+  bottom: 20px;
+  left: 10px;
+  }
+}
+

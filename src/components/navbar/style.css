@@ -1,0 +1,83 @@
+/* Nav */
+
+.nav {
+	width: 100%;
+	position: fixed;
+	padding: 20px 0;
+	background-color: #171718;
+	color: white;
+}
+
+.nav-row {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	column-gap: 30px;
+	flex-wrap: wrap;
+}
+
+.logo {
+	display: flex;
+  	align-items: center;
+	margin-right: auto;
+	color: white;
+	font-size: 24px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.logo img {
+	width: 90px; /* Ширина зображення */
+	height: 90px; /* Висота зображення */
+	margin-right: 10px; /* Відступ справа від тексту */
+	border-radius: 15%; /* Закруглені кути для круглого зображення */
+  }
+
+.logo strong {
+	font-weight: 900;
+}
+
+.nav-list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	column-gap: 30px;
+	font-size: 16px;
+	font-weight: 500;
+	font-family: 'Poppins', sans-serif;
+}
+
+.nav-list__link {
+	color: white;
+	transition: opacity 0.2s ease-in;
+}
+
+/*Підсвітлення посилання*/
+.nav-list__link:hover {
+	opacity: 0.8;
+}
+
+/*Підкреслення посилання*/
+.nav-list__link--active::before {
+	content: '';
+
+	position: absolute;
+	left: 0;
+	top: 100%;
+
+	display: block;
+	height: 2px;
+	width: 100%;
+	background-color: var(--accent);
+}
+
+.nav-list__link--active {
+	color: white;
+	transition: opacity 0.2s ease-in;
+	position: relative;
+}
+
+@media (max-width: 620px) {
+	.nav {
+		position: relative;	
+	}
+}
